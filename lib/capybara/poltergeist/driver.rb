@@ -174,8 +174,10 @@ module Capybara::Poltergeist
     end
 
     def reset!
-      browser.reset
+      browser.restart
+      #browser.reset
       @started = false
+      
     end
 
     def save_screenshot(path, options = {})
